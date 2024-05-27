@@ -30,21 +30,10 @@ fun DetailScreen(navController: NavHostController) {
     ) {
         Text(text = mockWeather.location, style = MaterialTheme.typography.h4)
         Text(text = "Temperature: ${mockWeather.temperature}°")
-        Text(text = "Wind Speed: ${mockWeather.windSpeed} m/s")
-        Text(text = "High: ${mockWeather.high}° Low: ${mockWeather.low}°")
-        Text(text = "Precipitation: ${mockWeather.precipitation} mm")
-        Text(text = "Humidity: ${mockWeather.humidity}%")
-        Text(text = "Sunrise: ${mockWeather.sunrise}")
-        Text(text = "Sunset: ${mockWeather.sunset}")
 
         Spacer(modifier = Modifier.height(16.dp))
 
         Text(text = "7 Day Forecast", style = MaterialTheme.typography.h6)
-        LazyColumn {
-            items(mockWeather.forecast) { forecast ->
-                ForecastItem(forecast)
-            }
-        }
     }
 }
 

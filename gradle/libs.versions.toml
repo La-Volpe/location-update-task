@@ -13,7 +13,11 @@ navigationCompose = "2.7.7"
 composeMaterial = "1.6.7"
 runtimeLivedata = "1.6.7"
 coil = "2.6.0"
-hilt= "2.50"
+hilt-version= "2.50"
+hilt_nav_compose = "1.2.0"
+retrofit = "2.9.0"
+okhttp_logger= "4.10.0"
+ksp-version = "1.9.0-1.0.13"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -35,11 +39,18 @@ androidx-compose-material = { group = "androidx.compose.material", name = "mater
 androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigationCompose" }
 androidx-compose-runtime-livedata = { group = "androidx.compose.runtime", name = "runtime-livedata", version.ref = "runtimeLivedata" }
 coil = { group = "io.coil-kt", name = "coil-compose", version.ref = "coil" }
-hilt = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
+hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt-version" }
+hilt-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hilt-version" }
+hilt_nav_compose = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "hilt_nav_compose" }
+retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
+convertor_json = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofit" }
+okhttp_logger = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okhttp_logger" }
+ksp = { group = "com.google.devtools.ksp", name = "ksp", version = "1.6.0-1.0.0" }
 
 
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
-
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp-version" }
+hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt-version" }
