@@ -5,12 +5,11 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import xyz.foxinia.weathersampleapp.detail.DetailScreen
-import xyz.foxinia.weathersampleapp.home.HomeScreen
-import xyz.foxinia.weathersampleapp.recent_locations.RecentLocationsScreen
+import xyz.foxinia.weathersampleapp.weather_looper.HomeScreen
 import xyz.foxinia.weathersampleapp.settings.SettingsScreen
 
-sealed class Screen(val route: String) {
-    object Detail : Screen("detail")
+sealed class AppScreen(val route: String) {
+    object Detail : AppScreen("detail")
 }
 
 @Composable
@@ -19,6 +18,6 @@ fun NavHostController.SetupNavGraph(navController: NavHostController,startDestin
         composable(BottomNavItem.Home.route) { HomeScreen(navController) }
 //        composable(BottomNavItem.RecentLocations.route) { RecentLocationsScreen(navController) }
         composable(BottomNavItem.Settings.route) { SettingsScreen(navController) }
-        composable(Screen.Detail.route) { DetailScreen(navController) }
+        composable(AppScreen.Detail.route) { DetailScreen(navController) }
     }
 }

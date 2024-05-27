@@ -63,6 +63,7 @@ dependencies {
     implementation(libs.androidx.compose.material)
     implementation(libs.androidx.navigation.compose)
     implementation(libs.coil)
+    implementation(libs.hilt)
     implementation(libs.androidx.compose.runtime.livedata)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

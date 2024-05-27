@@ -13,6 +13,7 @@ navigationCompose = "2.7.7"
 composeMaterial = "1.6.7"
 runtimeLivedata = "1.6.7"
 coil = "2.6.0"
+hilt= "2.50"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -34,6 +35,8 @@ androidx-compose-material = { group = "androidx.compose.material", name = "mater
 androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigationCompose" }
 androidx-compose-runtime-livedata = { group = "androidx.compose.runtime", name = "runtime-livedata", version.ref = "runtimeLivedata" }
 coil = { group = "io.coil-kt", name = "coil-compose", version.ref = "coil" }
+hilt = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
+
 
 
 [plugins]

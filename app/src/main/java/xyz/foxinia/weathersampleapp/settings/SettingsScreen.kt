@@ -16,7 +16,6 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
-import androidx.compose.ui.semantics.Role.Companion.Switch
 
 @Composable
 fun SettingsScreen(navController: NavHostController) {

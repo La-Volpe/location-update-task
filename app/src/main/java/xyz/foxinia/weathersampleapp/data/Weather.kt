@@ -38,5 +38,17 @@ data class Weather(
                 // Add more days...
             )
         )
+        val weatherList = listOf(
+            mockWeather,
+            mockWeather.copy(location = recentLocations.get(1)),
+            mockWeather.copy(location = recentLocations.get(2)),
+            mockWeather.copy(location = recentLocations.get(3)),
+            mockWeather.copy(location = recentLocations.get(4)),
+            mockWeather.copy(location = recentLocations.get(5)),
+            mockWeather.copy(location = recentLocations.get(6)),
+            mockWeather.copy(location = recentLocations.get(7)),
+            mockWeather.copy(location = recentLocations.get(8)),
+            mockWeather.copy(location = recentLocations.get(9))
+        )
     }
 }
