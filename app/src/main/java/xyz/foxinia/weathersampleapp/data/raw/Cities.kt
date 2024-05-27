@@ -1,5 +1,8 @@
 package xyz.foxinia.weathersampleapp.data.raw
 
+/**
+ * A data class that represents our input cities with their coordinates.
+ */
 object Cities {
     val list = listOf(
         Location("Hamburg",53.619653,10.079969),

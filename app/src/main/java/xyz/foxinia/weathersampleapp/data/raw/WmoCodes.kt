@@ -1,5 +1,15 @@
 package xyz.foxinia.weathersampleapp.data.raw
 
+/**
+ * A data class that represents a WMO (World Meteorological Organization) code.
+ *
+ * @property code The WMO code.
+ * @property dayDescription The description of the weather during the day for this code.
+ * @property nightDescription The description of the weather during the night for this code.
+ * @property dayUrl The URL of the icon representing the weather during the day for this code.
+ * @property nightUrl The URL of the icon representing the weather during the night for this code.
+ */
+
 data class WmoCode(
     val code: Int,
     val dayDescription: String,

@@ -12,6 +12,9 @@ import retrofit2.converter.gson.GsonConverterFactory
 import xyz.foxinia.weathersampleapp.Constants
 import xyz.foxinia.weathersampleapp.data.remote.Api
 
+/**
+ * Module for providing network dependencies
+ */
 
 @Module
 @InstallIn(ViewModelComponent::class, ServiceComponent::class)

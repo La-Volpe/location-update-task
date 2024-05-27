@@ -8,10 +8,14 @@ import xyz.foxinia.weathersampleapp.detail.DetailScreen
 import xyz.foxinia.weathersampleapp.weather_looper.HomeScreen
 import xyz.foxinia.weathersampleapp.settings.SettingsScreen
 
+
 sealed class AppScreen(val route: String) {
     object Detail : AppScreen("detail")
 }
 
+/**
+ * Setup the navigation graph for the app
+ */
 @Composable
 fun NavHostController.SetupNavGraph(navController: NavHostController,startDestination: String) {
     NavHost(navController = this, startDestination = startDestination) {

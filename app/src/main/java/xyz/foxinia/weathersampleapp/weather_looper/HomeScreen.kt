@@ -46,24 +46,29 @@ import coil.request.ImageRequest
 import dagger.hilt.android.lifecycle.HiltViewModel
 import xyz.foxinia.weathersampleapp.R
 
+
 @Composable
 fun HomeScreen(navController: NavHostController, viewModel: HomeViewModel = hiltViewModel()) {
-
+    /**
+     * Collect the weather data from the view model
+     */
     val weatherList = viewModel.weather.collectAsState()
-
     Column(
         modifier = Modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
         Spacer(modifier = Modifier.padding(top = 36.dp))
         weatherList.value?.let { weatherList ->
-            WeatherCarousel(weatherList)}
-
+            WeatherCarousel(weatherList)
+        }
     }
 }
 
 @Composable
 fun WeatherCard(weather: Weather, isActive: Boolean, onClick: () -> Unit) {
+    /**
+     *
+     */
     Card(
         modifier = Modifier
             .padding(8.dp)
@@ -97,9 +102,11 @@ fun WeatherCard(weather: Weather, isActive: Boolean, onClick: () -> Unit) {
 
 @Composable
 fun WeatherCarousel(weatherList: ArrayList<Weather>) {
+    // The current index of the weather list
     var currentIndex by remember { mutableStateOf(0) }
     val listState = rememberLazyListState()
 
+    // Automatically scroll through the weather list
     LaunchedEffect(Unit) {
         while (true) {
             delay(10000L)
@@ -108,6 +115,7 @@ fun WeatherCarousel(weatherList: ArrayList<Weather>) {
         }
     }
 
+    // Display the weather list
     LazyRow(
         state = listState,
         modifier = Modifier.fillMaxWidth(),
@@ -122,9 +130,9 @@ fun WeatherCarousel(weatherList: ArrayList<Weather>) {
 }
 @Composable
 fun TimerBar() {
+    // Progress of the timer bar
     var progress by remember { mutableStateOf(0f) }
-    var counter by remember { mutableStateOf(0)}
-
+    // Animate the progress of the timer bar
     LaunchedEffect(Unit) {
         repeat(100){
             delay(100) // wait 100 milliseconds
@@ -141,7 +149,7 @@ fun TimerBar() {
     ) {
         Box(
             modifier = Modifier
-                .fillMaxWidth(progress)
+                .fillMaxWidth(progress) // Set the width of the box to the progress
                 .height(4.dp)
                 .background(
                     color = MaterialTheme.colors.primaryVariant,
